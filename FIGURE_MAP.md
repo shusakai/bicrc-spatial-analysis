@@ -11,50 +11,27 @@ Panels not listed are experimental images (PhenoCycler, RNAscope, H&E) or illust
 Illustrative figure (PowerPoint/Illustrator). No code.
 
 ### Fig. 2 — Clustering and annotation of spatial transcriptomic cell populations
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| a | UMAP colored by Major_cluster | `01_major_cluster_annotation` |
-| c | Cell composition stacked bar per sample | `01_major_cluster_annotation` |
-| d | UMAP colored by Major_cluster_pathol (Tumor/Normal) | `01_major_cluster_annotation` |
-| e, f | Spatial scatter zoom (100μm scale) | `01_major_cluster_annotation` |
+`01_major_cluster_annotation` — UMAP by Major_cluster/Major_cluster_pathol, cell composition stacked bar, spatial scatter
 
 ### Fig. 3 — Identification of treatment-associated T cells, CAFs, and myeloid subclusters
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| a | Subcluster UMAPs (T cell, Stromal, Myeloid) | `02_subcluster_annotation` |
-| b | Dot plots of marker genes | `02_subcluster_annotation` |
-| c | Cell composition bar per subcluster | `05_temporal_dynamics` |
+- `02_subcluster_annotation` — Subcluster UMAPs, marker gene dot plots
+- `05_temporal_dynamics` — Cell composition bar per subcluster
 
 ### Fig. 4 — Treatment-resistant CAFs and myeloids enriched adjacent to residual tumor
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| a | SKNY gridding & distance from tumor surface | `09_skny_gridding`, `04_spatial_neighborhood_analysis` |
-| c–e | PhenoCycler protein imaging | — (experimental) |
+- `09_skny_gridding` — SKNY gridding & distance from tumor surface
+- `04_spatial_neighborhood_analysis` — SKNY distance distributions
 
 ### Fig. 5 — Molecular characteristics and targetable pathways of NR CAFs
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| a | Spatial scatter: NR CAF, pCR CAF, Fibroblast, Tumor | `10_caf_spatial_distribution` |
-| b | NR CAF density: peri-tumor vs peri-normal (violin) | `10_caf_spatial_distribution` |
-| e | UMAP colored by CAF subtype | `02_subcluster_annotation` |
-| h | RNA ISH (SFRP1, WNT5A, MMP11) | — (experimental) |
-| i | Kaplan-Meier DFS curves | `06_survival_analysis` |
-| j | TCGA validation (POSTN, KRAS) | `06_survival_analysis` |
+- `10_caf_spatial_distribution` — NR CAF spatial scatter, peri-tumor vs peri-normal violin
+- `02_subcluster_annotation` — UMAP colored by CAF subtype
+- `06_survival_analysis` — KM DFS curves, TCGA validation (POSTN, KRAS)
 
 ### Fig. 6 — Trajectory inference reveals bifurcation of CAFs into NR and pCR branches
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| a | Isomap embedding with STORIES potential & velocity | `07_caf_trajectory` |
-| c | Violin: Pre Other CAF fate probability by Response | `07_caf_trajectory` |
-| d | Per-patient spatial fate maps | `07_caf_trajectory` |
-| e | Driver gene trends (NR & CR branches) | `07_caf_trajectory` |
+`07_caf_trajectory` — STORIES potential & velocity on isomap, fate probability violin, per-patient spatial fate maps, driver gene trends
 
 ### Fig. 7 — Molecular function of tumor interacting with NR CAF
-| Panel | Description | Notebook |
-|-------|-------------|----------|
-| c | Per-patient pathway enrichment heatmap | `11_tumor_neighbor_analysis` |
-| e | LR significant spots spatial visualization | `12_ligand_receptor_analysis` |
-| f | LR network diagram | `12_ligand_receptor_analysis` |
+- `11_tumor_neighbor_analysis` — Per-patient pathway enrichment heatmap
+- `12_ligand_receptor_analysis` — LR spatial visualization, LR network diagram
 
 ---
 
@@ -93,14 +70,14 @@ Illustrative figure (PowerPoint/Illustrator). No code.
 
 | Notebook | Figures |
 |----------|---------|
-| `01_major_cluster_annotation` | Fig. 2a,c–f; SFig. 1 |
-| `02_subcluster_annotation` | Fig. 3a,b; Fig. 5e; SFig. 2 |
+| `01_major_cluster_annotation` | Fig. 2; SFig. 1 |
+| `02_subcluster_annotation` | Fig. 3; Fig. 5; SFig. 2 |
 | `03_tumor_analysis` | SFig. 2 |
-| `04_spatial_neighborhood_analysis` | Fig. 4a; SFig. 4 |
-| `05_temporal_dynamics` | Fig. 3c; SFig. 3 |
-| `06_survival_analysis` | Fig. 5i,j |
-| `07_caf_trajectory` | Fig. 6a,c–e; SFig. 6 |
-| `09_skny_gridding` | Fig. 4a (preprocessing) |
-| `10_caf_spatial_distribution` | Fig. 5a,b; SFig. 5 |
-| `11_tumor_neighbor_analysis` | Fig. 7c; SFig. 5, 7 |
-| `12_ligand_receptor_analysis` | Fig. 7e,f; SFig. 4 |
+| `04_spatial_neighborhood_analysis` | Fig. 4; SFig. 4 |
+| `05_temporal_dynamics` | Fig. 3; SFig. 3 |
+| `06_survival_analysis` | Fig. 5 |
+| `07_caf_trajectory` | Fig. 6; SFig. 6 |
+| `09_skny_gridding` | Fig. 4 (preprocessing) |
+| `10_caf_spatial_distribution` | Fig. 5; SFig. 5 |
+| `11_tumor_neighbor_analysis` | Fig. 7; SFig. 5, 7 |
+| `12_ligand_receptor_analysis` | Fig. 7; SFig. 4 |
