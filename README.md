@@ -1,6 +1,6 @@
 # BICRC Spatial Transcriptomics Analysis
 
-Analysis of the BICRC (Biliary Integrated Rectal Cancer) cohort using 10x Xenium spatial transcriptomics. This repository contains reproducible notebooks for the complete analytical pipeline, from initial cell type annotation through survival analysis.
+Analysis of the BICRC cohort using 10x Xenium spatial transcriptomics. This repository contains reproducible notebooks for the complete analytical pipeline, from initial cell type annotation through survival analysis.
 
 ## Cohort
 
@@ -25,7 +25,7 @@ bicrc-spatial-analysis/
 │   ├── 02_subcluster_annotation.ipynb      # Stromal/T cell/Myeloid subclustering
 │   ├── 03_tumor_analysis.ipynb             # Tumor subclustering and pathway scoring
 │   ├── 04_spatial_neighborhood_analysis.ipynb  # Squidpy, SKNY, LIANA
-│   ├── 05_cell_morphology.ipynb            # Roundness, aspect ratio, cell area
+│   ├── 05_temporal_dynamics.ipynb           # Temporal dynamics analysis
 │   └── 06_survival_analysis.ipynb          # KM curves, KRAS, TCGA validation
 ├── data/                                   # Input h5ad files and metadata (not tracked)
 ├── results/                                # CSV outputs from analyses
@@ -62,11 +62,11 @@ GPU-accelerated subclustering (rapids_singlecell) and Wilcoxon DEG analysis for:
 - LIANA ligand-receptor inference (CellPhoneDB method, consensus resource)
 - Longitudinal tracking of spatial co-localization patterns
 
-### 05 — Cell Morphology
-- Roundness (circularity = 4π×area/perimeter²) from Xenium cell boundary polygons
-- Aspect ratio via PCA on boundary vertex coordinates
-- Cell area in μm²
-- Morphology comparison across cell types, subclusters, and response groups
+### 05 — Temporal Dynamics
+- Longitudinal analysis of cell counts, proportions, and spatial densities across timepoints (Pre → JustAfter CRT → Resection)
+- Major cluster composition (stacked bar plots) and violin plots with Mann-Whitney U tests
+- Per-subcluster temporal dynamics (count, density, proportion) for Tumor, T cell, Myeloid, Stromal/CAF
+- UMAP embedding density for tumor cells stratified by Timepoint × Response
 
 ### 06 — Survival Analysis
 - Kaplan-Meier DFS curves for BICRC cohort
@@ -106,7 +106,8 @@ The following input files are expected in the `data/` directory:
 | `crc_postn.txt` | TCGA CRC POSTN TPM |
 | `rect_postn.txt` | TCGA Rectal POSTN TPM |
 | `tcga_kras_colon_rect.tsv` | TCGA KRAS mutation status |
-| `xenium_output/{sample}/cell_boundaries.csv.gz` | Xenium cell boundary polygons |
+| `cell_area.txt` | Tissue area (μm²) per sample |
+| `cell_count.txt` | Total cell count per sample |
 
 ## Key Dependencies
 
@@ -116,5 +117,3 @@ The following input files are expected in the `data/` directory:
 - **gseapy**: Pathway scoring via Enrichr
 - **liana**: Ligand-receptor interaction analysis
 - **lifelines**: Kaplan-Meier survival analysis
-- **shapely**: Cell polygon geometry
-- **sklearn**: PCA for aspect ratio computation
