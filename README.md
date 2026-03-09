@@ -1,6 +1,8 @@
-# BICRC Spatial Transcriptomics Analysis
+# Rectal Cancer Spatial Multiomics
 
-Analysis of the BICRC cohort using 10x Xenium spatial transcriptomics. This repository contains reproducible notebooks for the complete analytical pipeline, from initial cell type annotation through survival analysis.
+Code repository for: *Single-cell spatial multiomics identifies POSTN+ CAFs mediating chemoradiotherapy resistance in rectal cancer*
+
+Analysis of 24 rectal cancer patients using 10x Xenium spatial transcriptomics. This repository contains reproducible notebooks for the complete analytical pipeline, from initial cell type annotation through survival analysis.
 
 ## Cohort
 
@@ -19,7 +21,7 @@ Analysis of the BICRC cohort using 10x Xenium spatial transcriptomics. This repo
 ## Repository Structure
 
 ```
-bicrc-spatial-analysis/
+rectal-cancer-spatial-multiomics/
 ├── notebooks/
 │   ├── 01_major_cluster_annotation.ipynb   # Major cell type annotation and UMAP
 │   ├── 02_subcluster_annotation.ipynb      # Stromal/T cell/Myeloid subclustering
@@ -74,7 +76,7 @@ GPU-accelerated subclustering (rapids_singlecell) and Wilcoxon DEG analysis for:
 - UMAP embedding density for tumor cells stratified by Timepoint × Response
 
 ### 06 — Survival Analysis
-- Kaplan-Meier DFS curves for BICRC cohort
+- Kaplan-Meier DFS curves
 - Youden-index threshold optimization for spatial features
 - KRAS mutation stratification
 - TCGA rectal cancer validation (POSTN TPM, KRAS mutation)
