@@ -59,8 +59,8 @@ Mapping between manuscript figures and the notebook code that generates each pan
 | f | POSTN spatial expression | `07_caf_trajectory` | cell-62 | Isomap scatter colored by POSTN |
 | g | POSTN expression across conditions | `07_caf_trajectory` | cell-78 | Embedding colored by POSTN |
 | h | RNA ISH: SFRP1, WNT5A, MMP11 | — | — | Experimental (RNAscope/ISH) |
-| i | H&E staining | — | — | Experimental |
-| j | Cell segmentation overlay | — | — | Experimental |
+| i | Kaplan-Meier DFS curves | `06_survival_analysis` | cell-8, cell-12 | KM by response group / spatial features |
+| j | TCGA validation (POSTN, KRAS) | `06_survival_analysis` | cell-18, cell-19 | POSTN boxplot + KM curve |
 
 ### Fig. 6 — Trajectory inference reveals bifurcation of CAFs into NR and pCR branches
 | Panel | Description | Notebook | Cell | Notes |
@@ -146,5 +146,4 @@ Mapping between manuscript figures and the notebook code that generates each pan
 | Notebook | Role |
 |----------|------|
 | `03_tumor_analysis` | Suppl. Fig. 2d–e (tumor subclusters, pathway scoring) |
-| `06_survival_analysis` | KM curves, TCGA validation — may correspond to figures not in this PPTX |
 | `09_skny_gridding` | Preprocessing (gridding); outputs used by notebooks 10, 11, 12 |
