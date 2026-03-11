@@ -170,3 +170,7 @@ The following input files are expected in the `data/` directory:
 - **cellrank**: Fate probability and lineage analysis
 - **skny / stlearn**: Spatial gridding and cell-cell interaction
 - **OpenCV (cv2)**: Contour detection for distance calculation
+
+## Contributors
+
+- [Shunsuke A Sakai](https://github.com/shusakai)
